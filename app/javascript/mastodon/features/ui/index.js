@@ -379,7 +379,7 @@ export default class UI extends React.Component {
 
           <ColumnsAreaContainer ref={this.setColumnsAreaRef} singleColumn={isMobile(width)}>
             <WrappedSwitch>
-              <Redirect from='/' to='/getting-started' exact />
+              <Redirect from='/' to='/timelines/public/local' exact />
               <WrappedRoute path='/getting-started' component={GettingStarted} content={children} />
               <WrappedRoute path='/keyboard-shortcuts' component={KeyboardShortcuts} content={children} />
               <WrappedRoute path='/timelines/home' component={HomeTimeline} content={children} />

@@ -1,0 +1,463 @@
+/**
+ * * Author : El_Jefe
+ * * Contact : 2a_social@protonmail.com
+ * * Instance : https://2ndamendment.social
+ * * StyleSheets overload for Mastodon v2.2.0 add your instance on top
+ * * Licence CC by NC - https://creativecommons.org/licenses/by-nc/4.0/
+ * * have fun.
+ * **/
+
+body {
+  // background: #444b5d url('../images/bg_flag.jpg') no-repeat !important;
+  background: #191845 url('../images/public_flag_bg.png') fixed no-repeat top center !important;
+  background-size: 100% !important;
+  .h-feed {
+    .activity-stream {
+      & .entry.h-entry {
+      }
+    }
+  }
+}
+
+// ADMIN
+body.admin {
+}
+
+// APLICATION
+.app-body {
+  background: #444b5d url('../images/bg_flag.jpg') no-repeat !important;
+  background-size: cover !important;
+  .ui {
+    background: none !important;
+  }
+  .drawer__inner {
+    background: #444b5d url('../images/vertical-flag.png') no-repeat bottom / 100% auto;
+    > .mastodon {
+      background: none;
+      flex: 1;
+    }
+  }
+
+  /* One Column */
+  .tabs-bar {display: flex; }
+  .tabs-bar > a:first-child {
+    display: none;
+  }
+  .columns-area {
+    width: calc(50% + 300px);
+    margin: auto;
+    justify-content: center;
+    .scrollable {
+      background: transparent;
+      .item-list {
+        article {
+          margin: 20px 0px;
+          background: rgba(0,6,84,.8);
+          margin-right: 10px;
+          box-shadow: 3px 4px 10px -3px red;
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .column {
+      display: none;
+      .column-header__wrapper {
+        display: none;
+      }
+    }
+
+    .column:last-child {
+      display: flex;
+      min-width: 600px;
+    }
+  }
+
+
+  /* Color */
+  .tabs-bar {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .tabs-bar__link {
+    color: #333;
+    &:nth-child(3) {
+      order: 2;
+    }
+    &:nth-child(5) {
+      display: none;
+    }
+    &:last-child {
+      order: 2;
+    }
+  }
+
+  .tabs-bar__link:hover, .tabs-bar__link:focus, .tabs-bar__link:active {
+    background: red;
+    color: #fff;
+    border-bottom: 2px solid rgba(0, 6, 84,0.8);
+  }
+
+  .tabs-bar__link.active {
+    background: rgba(0, 6, 84,0.8);
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
+
+  /* Setting */
+  body.admin {
+    background: rgba(10, 65, 100,1);
+  }
+
+  .admin-wrapper .sidebar-wrapper {
+    background: rgba(0, 0, 0,0.2);
+  }
+
+  .admin-wrapper .sidebar ul a.selected {
+    background: rgba(37, 136, 208,0.25);
+  }
+}
+
+// Public page
+.about-body {
+  background: #191845 url('../images/public_flag_bg.png') no-repeat top center / cover !important;
+  .landing-page {
+    .header-wrapper {
+      background: none !important;
+    }
+    .features {
+      .container {
+        // background: rgba(255,255,255,0.5);
+        // padding: 50px;
+        // .about-mastodon {
+        //   h3, h6 {
+        //     color: #1073ba;
+        //   }
+        // }
+      }
+    }
+  }
+}
+
+// CUSTOM STYLES
+
+.about-body .actions .info a, .about-body p a, .about-body li a {
+  color: rgba(111, 178, 226,1);
+}
+
+.about-body .actions .info a:hover, .about-body p a:hover, .about-body li a:hover {
+  color: rgba(255,255,255,1);
+}
+
+.webapp-btn {
+  // display: block;
+  // width: 100%;
+  // border: 0 none;
+  // border-radius: 4px;
+  // color: rgba(255,255,255,1) !important;
+  // font-size: 18px;
+  // padding: 10px;
+  // text-transform: uppercase;
+  // text-decoration: none;
+  // text-align: center;
+  // box-sizing: border-box;
+}
+
+.webapp-btn:hover {
+}
+
+.simple_form button, .simple_form .block-button {
+  margin-bottom: 2rem;
+}
+
+.screenshot-with-signup .simple_form, .screenshot-with-signup .closed-registrations-message {
+  width: 50%;
+  min-width: 300px;
+}
+
+/* Fil */
+body.app-body, body.about-body {
+}
+
+.ui {
+  background: rgba(49, 53, 67, 0.5);
+}
+
+.column > .scrollable, .empty-column-indicator {
+  background: rgba(255,255,255,1);
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.column-back-button {
+  background: rgba(240, 240, 240,1);
+  box-shadow: inset 0 5px 5px rgba(0,0,0,0.05);
+  border-bottom: 1px solid transparent;
+  height: auto;
+}
+
+.column-header {
+  background: rgba(37, 136, 208,1);
+  border-bottom: 1px solid #ccc;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.column-icon, .collapsable-collapsed {
+  background: transparent !important;
+  color: rgba(255,255,255,1);
+}
+
+.column-header__back-button, .column-header__button {
+  background: rgba(225, 225, 225,1);
+  color: rgba(37, 136, 208,1);
+}
+
+.column-header__button.active, .column-header__button.active:hover, .column-header__collapsible > div {
+  background: rgba(10, 65, 100,1);
+}
+
+.muted .status__content a, .muted .status__content p, .muted .status__display-name strong {
+  color: rgba(10, 65, 100,0.5);
+}
+
+.column-link {
+  background: rgba(240, 240, 240,1);
+  border-bottom: 1px solid #ccc;
+  color: rgba(51, 51, 51,1);
+  box-shadow: inset 0 5px 5px rgba(0,0,0,0.05);
+}
+
+.column-link:hover {
+  background: rgba(200,222,243,0.5);
+  color: rgba(255,255,255,1);
+}
+
+.drawer__header a:hover { background: rgba(37, 136, 208,0.6); }
+
+.getting-started {
+  // background: url(https://eunivers.social/system/media_attachments/files/mastodon-getting-started.png) no-repeat 0 100% local;
+}
+
+.column-subheading { background: rgba(255,255,255,1); }
+
+/* Status */
+.status, .account { border-bottom: 1px solid #ccc; }
+
+.status__display-name strong, .account__display-name strong { color: rgba(49,53,67,1); }
+
+.status__content a, .reply-indicator__content a { color: rgba(37, 136, 208,1); }
+
+// .reply-indicator__content p, .status__content p { color: #fff !important }
+
+.status__content .status__content__spoiler-link, .reply-indicator__content .status__content__spoiler-link {
+  background: rgba(49,53,67,1);
+  line-height: 1.2rem;
+}
+
+.status__content__spoiler-link span { color: rgba(255, 255, 255,1); }
+
+.account__header { background: rgba(10, 65, 100,1); }
+
+.account__header > div { background: rgba(10, 65, 100,0.5); }
+
+.account__header .icon-button, .account__action-bar .icon-button { color: rgba(255,255,255,0.8); }
+
+.account__header .icon-button:hover, .account__action-bar .icon-button:hover { color: rgba(255,255,255,1); }
+
+.account__action-bar {
+  background: rgba(10, 65, 100,1);
+  border-top: 1px solid rgba(255,255,255,0.25);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.account__action-bar__tab { border-left: 1px solid rgba(255,255,255,0.25); }
+
+.notification__message a:hover { color: rgba(37, 136, 208,1); }
+
+.detailed-status__wrapper {
+  .focusable {
+    background: rgba(0,6,84,.8);
+    margin-top: 10px;
+    margin-right: 10px;
+    box-shadow: 3px 4px 10px -3px red;
+  }
+}
+
+.detailed-status {
+  background: rgba(200,222,243,0.5);
+  color: rgba(51,51,51,1);
+  & .status__content {
+    color: white;
+  }
+}
+
+.detailed-status__display-name, .detailed-status__meta { color: rgba(0,0,0,0.5); }
+
+.detailed-status__display-name strong { color: rgba(0, 0, 0,1); }
+
+.detailed-status__action-bar {
+  background: rgba(0, 0, 0,0.05);
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-shadow: inset 0 5px 5px rgba(0,0,0,0.05);
+}
+
+.getting-started p { color: rgba(102, 102, 102,1); }
+
+.notification { background: rgba(200,222,243,0.15); }
+
+/* Status Button & drawer */
+.icon-button.active { color: rgba(37, 136, 208,1); }
+
+button.icon-button i.fa-retweet { background: none transparent; }
+
+button.icon-button i.fa-retweet:after {
+  height: 19px;
+  width: 22px;
+  content: "\f079";
+  display: block;
+}
+
+.scrollable .status .icon-button, .drawer__inner .icon-button.inverted, .drawer__inner .text-icon-button {
+  // color: rgba(37, 136, 208,0.6);
+}
+
+.scrollable .status .icon-button:hover, .drawer__inner .icon-button.inverted:hover, .drawer__inner .text-icon-button:hover { color: rgba(37, 136, 208,0.4);
+}
+
+.scrollable .status .icon-button.star-icon.active, .notification__favourite-icon-wrapper .star-icon, button.icon-button.active i.fa-retweet { color: rgba(250, 180, 0, 1); }
+
+button.icon-button.active i.fa-retweet:after { animation: spin 0.5s linear; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Drawer */
+.drawer__header {
+  background: transparent;
+}
+
+.search__input {
+  background: rgba(255, 255, 255, 1);
+}
+
+.drawer__inner {
+  border: 1px solid #e6ecf0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 5px 5px rgba(0,0,0,0.05);
+  color: #333;
+  border-radius: 0.25rem;
+  height: auto;
+  overflow: visible;
+}
+
+.navigation-bar strong {
+  font-size: 1rem;
+  color: rgba(49,53,67,1);
+}
+
+.compose-form__buttons {
+  background: transparent;
+  box-shadow: none;
+}
+
+.drawer__inner.darker, .search-results__header {
+  background: rgba(255, 255, 255, 1);
+}
+
+.drawer__inner.darker .account:hover {
+  background: rgba(37, 136, 208,0.05);
+}
+
+/* About */
+.landing-page .header-wrapper.compact, .landing-page .header-wrapper {
+  background: rgba(10, 65, 100,0.8);
+}
+
+.landing-page p, .landing-page .extended-description li, .landing-page .extended-description p, .landing-page h1 small, .simple_form p.hint.subtle-hint, .features-list__row .text {
+  color: rgba(255,255,255,0.8);
+}
+
+.information-board {
+  background: rgba(0,30,50,0.6);
+}
+
+.information-board .panel {
+  background: rgba(0,30,50,1);
+}
+
+.sidebar-layout .panel .panel-header {
+  background: rgba(111, 178, 226,0.5);
+}
+
+.sidebar-layout .sidebar {
+  border-left: 1px solid rgba(111, 178, 226,0.5);
+}
+
+.extended-description .container,.features .container, body.admin .content-wrapper .content {
+  background: rgba(0,30,50,0.6);
+  padding: 1rem;
+}
+
+.information-board .panel .panel-header, .information-board .panel .panel-header a, .information-board .panel .panel-header span {
+  color: #9baec8;
+}
+
+.landing-page .learn-more-cta, .landing-page .header .hero .closed-registrations-message {
+  background: rgba(0,30,50,0.6);
+}
+
+.landing-page .header .hero .simple_form {
+  background: rgba(0,30,50,0.95);
+}
+
+.landing-page #mastodon-timeline p {
+  color: rgba(0,30,50,1);
+}
+
+.landing-page #mastodon-timeline p a {
+  color: rgba(111, 178, 226,1);
+}
+
+.landing-page #mastodon-timeline p a:hover {
+  color: rgba(37, 136, 208,1);
+}
+
+.landing-page .header .hero .floats .float-1 {
+  background-image: url(https://eunivers.social/system/media_attachments/files/cloud2.png);
+}
+
+.landing-page .header .hero .floats .float-2 {
+  background-image: url(https://eunivers.social/system/media_attachments/files/cloud1.png);
+}
+
+.landing-page .header .hero .floats .float-3 {
+  background-image: url(https://eunivers.social/system/media_attachments/files/cloud3.png);
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.6);
+}
+
+::-webkit-scrollbar:hover {
+  background: rgba(0,0,0,0);
+}
+
+::-webkit-scrollbar:hover {
+  background: rgba(0,0,0,0);
+}
+
+@import 'application';
