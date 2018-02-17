@@ -20,6 +20,7 @@
             - else
               = link_to t('auth.login'), new_user_session_path, class: 'webapp-btn'
           %li= link_to t('about.about_this'), about_more_path
+          %li= link_to t('about.sponsors'), about_sponsors_path
           %li
             = link_to 'https://joinmastodon.org/' do
               = "#{t('about.other_instances')}"

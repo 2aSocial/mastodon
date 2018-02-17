@@ -2,7 +2,7 @@
 
 class AboutController < ApplicationController
   before_action :set_body_classes
-  before_action :set_instance_presenter, only: [:show, :more, :terms]
+  before_action :set_instance_presenter, only: [:show, :more, :terms, :sponsors]
 
   def show
     serializable_resource = ActiveModelSerializers::SerializableResource.new(InitialStatePresenter.new(initial_state_params), serializer: InitialStateSerializer)
@@ -10,6 +10,8 @@ class AboutController < ApplicationController
   end
 
   def more; end
+
+  def sponsors; end
 
   def terms; end
 

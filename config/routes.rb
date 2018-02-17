@@ -310,6 +310,7 @@ Rails.application.routes.draw do
 
   get '/about',      to: 'about#show'
   get '/about/more', to: 'about#more'
+  get '/about/sponsors', to: 'about#sponsors'
   get '/terms',      to: 'about#terms'
 
   root 'home#index'

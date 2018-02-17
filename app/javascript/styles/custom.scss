@@ -24,6 +24,9 @@ body.admin {
 }
 
 // APLICATION
+.text-center {
+  text-align: center;
+}
 .app-body {
   background: #444b5d url('../images/bg_flag.jpg') no-repeat !important;
   background-size: cover !important;
@@ -126,6 +129,20 @@ body.admin {
   .landing-page {
     .header-wrapper {
       background: none !important;
+    }
+    .sponsor-board {
+      background: #1f232b;
+      padding: 20px 0;
+      .container {
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .sponsors {
+      &--logo {
+        text-align: center;
+        margin: 20px auto;
+      }
     }
     .features {
       .container {
