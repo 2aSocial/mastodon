@@ -130,6 +130,24 @@ body.admin {
     .header-wrapper {
       background: none !important;
     }
+    .donate-with-crypto {
+      background: none;
+      min-width: auto;
+      height: auto;
+      span {
+        color: red;
+        font: normal 500 14px/32px 'mastodon-font-display', sans-serif;
+        cursor: pointer;
+      }
+      &:after {
+        content: none;
+      }
+      &:hover {
+        span {
+          color: #d9e1e8;
+        }
+      }
+    }
     .sponsor-board {
       background: #1f232b;
       padding: 20px 0;
