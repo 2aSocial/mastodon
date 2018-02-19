@@ -163,6 +163,9 @@ body.admin {
         margin: 20px auto;
       }
     }
+    .about-short {
+      background: rgba(0,30,50,0.6) !important;
+    }
     .features {
       .container {
         // background: rgba(255,255,255,0.5);
@@ -423,7 +426,7 @@ button.icon-button.active i.fa-retweet:after { animation: spin 0.5s linear; }
 }
 
 .information-board {
-  background: rgba(0,30,50,0.6);
+  background: rgba(0,30,50,0.6) !important;
 }
 
 .information-board .panel {
@@ -452,7 +455,7 @@ button.icon-button.active i.fa-retweet:after { animation: spin 0.5s linear; }
 }
 
 .landing-page .header .hero .simple_form {
-  background: rgba(0,30,50,0.95);
+  background: rgba(0,30,50,0.6) !important;
 }
 
 .landing-page #mastodon-timeline p {
