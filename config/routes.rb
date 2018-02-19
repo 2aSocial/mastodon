@@ -24,9 +24,11 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get '/invite/:invite_code', to: 'auth/registrations#new', as: :public_invite
+    match '/auth/finish_signup' => 'auth/confirmations#finish_signup', via: [:get, :patch], as: :finish_signup
   end
 
   devise_for :users, path: 'auth', controllers: {
+    omniauth_callbacks: 'auth/omniauth_callbacks',
     sessions:           'auth/sessions',
     registrations:      'auth/registrations',
     passwords:          'auth/passwords',
@@ -101,7 +103,10 @@ Rails.application.routes.draw do
     resources :sessions, only: [:destroy]
   end
 
-  resources :media,  only: [:show]
+  resources :media, only: [:show] do
+    get :player
+  end
+
   resources :tags,   only: [:show]
   resources :emojis, only: [:show]
   resources :invites, only: [:index, :create, :destroy]
@@ -305,6 +310,7 @@ Rails.application.routes.draw do
 
   get '/about',      to: 'about#show'
   get '/about/more', to: 'about#more'
+  get '/about/sponsors', to: 'about#sponsors'
   get '/terms',      to: 'about#terms'
 
   root 'home#index'
