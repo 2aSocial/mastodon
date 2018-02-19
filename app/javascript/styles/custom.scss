@@ -35,9 +35,10 @@ body.admin {
   }
   .drawer__inner {
     background: #444b5d url('../images/vertical-flag.png') no-repeat bottom / 100% auto;
-    > .mastodon {
+    &__mastodon {
       background: none;
       flex: 1;
+      & > img { display: none; }
     }
   }
 
